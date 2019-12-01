@@ -1,0 +1,171 @@
+/**************************
+
+Table of Contents
+
+1. Global Tags
+2. Navigation Bar Elements
+3. Main Section Elements
+4. Footer Elements
+
+**************************/
+
+
+/**********
+Global Tags
+**********/
+
+*{
+	font-family: 'Lato';
+}
+
+body,html{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+p, li{
+	line-height: 150%;
+	font-size: 120%;
+}
+
+a{
+	transition: filter 0.2s linear;
+}
+
+a:hover{
+	filter: hue-rotate(45deg);
+}
+
+
+/**********************
+Navigation Bar Elements
+**********************/
+
+.nav{
+	width: 100%;
+	background-color: #eee;
+	height: 10%;
+	background: linear-gradient(-40deg, yellow 0 10%, white 0 87%, yellow 0 10%);
+}
+
+.nav-bar{
+	margin: auto;
+	width: 80%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(5,1fr);
+	grid-template-areas: "section1 section2 section3 section4 section5";
+}
+
+.section{
+	height: 100%;
+	width: auto;
+	display: flex;
+	text-align: center;
+}
+
+.nav-text{
+	display: inline-block;
+	font-size: 150%;
+	margin: auto;
+	transition: color 0.2s linear;
+}
+
+.nav-text:hover{
+	color: red;
+	cursor: pointer;
+}
+
+
+/********************
+Main Section Elements
+********************/
+
+.main{
+	margin: auto;
+	margin-top: 3%;
+	width: 95%;
+	height: auto;
+	padding-bottom: 4%;
+}
+
+.main-header{
+	width: 100%;
+	height: 20%;
+}
+
+.main-text{
+	margin: auto;
+	margin-top: 5%;
+	width: 85%;
+	height: auto;
+}
+
+.sources{
+	height: 2px;
+	background-color: black;
+	border: none;
+	border-radius: 10%
+}
+
+.source{
+	display: block;
+	line-height: 170%;
+	font-size: 120%;
+}
+
+
+/**************
+Footer Elements
+**************/
+
+.footer{
+	width: 100%;
+	height: 6%;
+	margin-top: 5%;
+	background-color: #fe0;
+	box-shadow: -1px -1px 5px 1px grey;
+	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: 100%;
+	justify-content: center;
+}
+
+.footer-grid{
+	margin: auto;
+	width: 95%;
+	height: 100%;
+	display: inline-grid;
+	grid-template-columns: repeat(3,auto);
+	grid-template-areas: "previous names next";
+	align-items: center;
+}
+
+.previous, .next{
+	font-size: 110%;
+	transition: color 0.1s linear;
+}
+
+.previous{
+	justify-self: left;
+	grid-area: previous;
+}
+
+.next{
+	justify-self: right;
+	grid-area: next;
+}
+
+.previous:hover, .next:hover{
+	color: #f00;
+	cursor: pointer;
+}
+
+.names{
+	justify-self: center;
+	grid-area: names;
+	font-size: 75%;
+	text-align: center;
+}
